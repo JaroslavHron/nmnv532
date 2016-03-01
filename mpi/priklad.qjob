@@ -1,0 +1,6 @@
+#PBS -q single
+#PBS -l nodes=4
+#PBS -N job_priklad
+#PBS -d /usr/users/hron/nmod041/priklad_mpi/
+
+mpirun ./priklad.x
