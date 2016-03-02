@@ -1,5 +1,0 @@
-#PBS -l nodes=4
-#PBS -N job_hello
-#PBS -d /usr/users/hron/nmod041/priklad_mpi/
-
-mpirun -d --display-map -n 4 ./hello.x

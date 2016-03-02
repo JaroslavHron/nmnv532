@@ -4,8 +4,6 @@
 /* MPI header*/
 #include <mpi.h>
 
-extern char **environ;
-
 int main(int argc, char *argv[])
 {
   int numprocs;
@@ -18,15 +16,6 @@ int main(int argc, char *argv[])
   
   printf ("Hello! This is cpu no %d out of %d cpus total.\n", procnum, numprocs);
 
-  /*  int i = 1;
-  char *s = *environ;
-
-  for (; s; i++) {
-    printf("%s\n", s);
-    s = *(environ+i);
-    }*/
-
   MPI_Finalize();
-
   return;
 }

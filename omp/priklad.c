@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
             numprocs=omp_get_num_threads();
             procnum = omp_get_thread_num();
     
-            printf ("Working - cpu %d out of %d on %d interval\n", procnum, numprocs,i);
+            printf ("Working - cpu %d out of %d on interval no. %d\n", procnum, numprocs,i);
 
           } 
         

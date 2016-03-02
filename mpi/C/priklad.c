@@ -34,11 +34,12 @@ int main(int argc, char *argv[])
       sum_local += h * 4.0 / (1.0 + x*x);
     } 
   
+  pi=0.0;
   receiver=0;
   MPI_Reduce(&sum_local, &pi, 1, MPI_DOUBLE, MPI_SUM, receiver, MPI_COMM_WORLD);
   
   if (rank == 0) 
-    printf("pi is approximately %.16f, Error is %.16f\n", pi, fabs(pi - M_PI));
+    printf("rank %d: pi is approximately %.16f, Error is %.16f\n", rank, pi, fabs(pi - M_PI));
   
   MPI_Finalize(); 
   return;
